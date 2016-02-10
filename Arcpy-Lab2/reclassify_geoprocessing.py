@@ -1,7 +1,7 @@
 # Rachel Roberts
 # Arcpy Lab 2: Geoprocessing Tools and Services
 # February 10, 2016
-# Worked with Will Chan. Primarily discussed the use of cursors and nested loops under the context of reclassifying values and looping through various fields in the table. 
+# Worked with Will Chan.Primarily discussed the use of cursors and nested loops under the context of reclassifying values and looping through various fields in the table. 
 
 #Import Arcpy
 
@@ -46,3 +46,5 @@ del update_cursor
 
 # Create new feature class with classification field. 
 arcpy.CopyFeatures_management (input_layer, output_layer)
+
+# URL to service: http://qilin.geog.uw.edu:6080/arcgis/admin/services/rachelroberts
