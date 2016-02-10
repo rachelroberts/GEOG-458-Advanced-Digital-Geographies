@@ -1,7 +1,8 @@
 # Rachel Roberts
-# Arcpy Lab 2: Geoprocessing Tools
+# Arcpy Lab 2: Geoprocessing Tools and Services
 # February 10, 2016
-# Worked with Will Chan.Primarily discussed the use of cursors and nested loops under the context of reclassifying values and looping through various fields in the table. 
+# Worked with Will Chan. Primarily discussed the use of cursors and nested loops under the context of reclassifying values and looping through various fields in the table. 
+
 #Import Arcpy
 
 import sys 
@@ -17,7 +18,8 @@ input_layer = arcpy.GetParameterAsText(0)   # input layer/ featureclass / shapef
 reclass_table = arcpy.GetParameterAsText(1) # table that contains reclass values.
 reclass_field = arcpy.GetParameterAsText(2) # field the reclass will be based off of.
 new_field = arcpy.GetParameterAsText(3)     # name of the new field that will be populated with reclass values.
-no_data = arcpy.GetParameterAsText(4)       # the value specified if a feature in the input file cannot be reclassified.
+no_data = arcpy.GetParameterAsText(4)       # the value specified if a feature in the input file cannot be reclassified.\
+output_layer = arcpy.GetParameterAsText(5)  # output file resulting from tool 
 
 # Create field to populate with reclassify values. 
 arcpy.AddField_management (input_layer, new_field)
@@ -41,3 +43,6 @@ for update_row in update_cursor: #loops through the reclass_field and updates th
             
 del update_row     
 del update_cursor
+
+# Create new feature class with classification field. 
+arcpy.CopyFeatures_management (input_layer, output_layer)
