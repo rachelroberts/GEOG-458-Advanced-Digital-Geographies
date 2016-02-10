@@ -47,4 +47,6 @@ del update_cursor
 # Create new feature class with classification field. 
 arcpy.CopyFeatures_management (input_layer, output_layer)
 
-# URL to service: http://qilin.geog.uw.edu:6080/arcgis/admin/services/rachelroberts
+# Published Web Service:
+	# Tool Name: VectorReclassRoberts
+	# URL to service: http://qilin.geog.uw.edu:6080/arcgis/admin/services/rachelroberts
