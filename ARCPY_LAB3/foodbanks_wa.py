@@ -127,11 +127,13 @@ sys.path.append('C:\\Program Files (x86)\\ArcGIS\\Desktop10.3\\arcpy')
 sys.path.append('C:\\Program Files (x86)\\ArcGIS\\Desktop10.3\\ArcToolbox\\Scripts')
 import arcpy
 
-arcpy.env.workspace = r"U:\ARCPY_LAB3\DATA\FOODBANK_SHAPEFILES\foodbanks_WA"
-fc = r"foodbanks_WA.shp"
+arcpy.env.workspace = r"U:\ARCPY_LAB3\DATA\FOODBANK_SHAPEFILES\foodbanks_WA.shp"
 geoJSON_output = "foodbanks_WA.geojson"
 geoJSON_destination = "U:\\ARCPY_LAB3\\DATA\\GEOJSON_FILES" + geoJSON_output
 
 # Convert files from shapefiles to geoJSON file.
-call(['C:\\OSGeo4W\\bin\\ogr2ogr', '-f','GeoJSON','-t_srs','WGS84', '-s_srs','EPSG:2927', geoJSON_destination])
-
+call(['C:\\OSGeo4W\\bin\\ogr2ogr',
+      '-f','GeoJSON','-t_srs','WGS84',
+      '-s_srs','EPSG:26913',
+      'U:\\ARCPY_LAB3\\DATA\\GEOJSON_FILES\\foodbanks_WA.geojson',
+      'U:\\ARCPY_LAB3\\DATA\\FOODBANK_SHAPEFILES\\foodbanks_WA.geojson'])
