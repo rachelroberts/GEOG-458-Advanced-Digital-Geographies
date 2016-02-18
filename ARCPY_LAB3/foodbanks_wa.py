@@ -3,6 +3,7 @@
 # February 18, 2016
 # Discussed the lab with Will Chen. Discussed scrapping the html/website and geocoding strategies. 
 # Additionally, I often referenced srcappers uploaded to the class github. They were especially useful in this lab. 
+# Lastly, I refered to code in the previous labs for reference about how to convert files from shapefiles to geoJSON files.
 
 # The following code extracts address infrmation
 # for food banks/ food pantries in Washington State. The following code extracts
