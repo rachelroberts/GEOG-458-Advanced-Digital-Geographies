@@ -1,0 +1,152 @@
+{
+  "bounds": [
+    -180,
+    -85.05112877980659,
+    180,
+    85.05112877980659
+  ],
+  "center": [
+    0,
+    0,
+    2
+  ],
+  "format": "png",
+  "interactivity": {
+    "fields": [
+      "NAME"
+    ],
+    "layer": "populated_places",
+    "template_teaser": "City: {{{NAME}}} "
+  },
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape",
+        "id": "countries",
+        "project": "WebMapping_part2",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      }
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999999990007,
+        -55.91477792755927,
+        180,
+        83.63432689077344
+      ],
+      "id": "states",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/cultural/10m-admin-1-states-provinces-lakes-shp.zip",
+        "id": "states",
+        "project": "WebMapping_part2",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "states"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -166.53248206565993,
+        7.997570932184098,
+        -52.72651149202636,
+        70.28700516674117
+      ],
+      "id": "10mroads",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/cultural/10m-roads.zip",
+        "id": "10mroads",
+        "project": "WebMapping_part2",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "10mroads"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -167.52108602795352,
+        19.057874717775228,
+        -78.15370747652669,
+        68.65547334351777
+      ],
+      "id": "us_parks_area",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/cultural/10m-us-parks-area.zip",
+        "id": "us_parks_area",
+        "project": "WebMapping_part2",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "us_parks_area"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -157.98071326396882,
+        -51.05295582458972,
+        178.03340213451082,
+        69.76979848904467
+      ],
+      "id": "urban_areas",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/cultural/10m-urban-areas.zip",
+        "id": "urban_areas",
+        "project": "WebMapping_part2",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "urban_areas"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -81.17908472282718,
+        179.38330358817024,
+        82.48332318035943
+      ],
+      "id": "populated_places",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip",
+        "id": "populated_places",
+        "project": "WebMapping_part2",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "populated_places"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "",
+  "description": "",
+  "legend": "<strong>U.S. National Parks and Cities</strong><br/>Large circles indicate mega-cities, while small circles indicate all others. <br/> National parks are outlined in green. <br/> Urban areas are outlined in yellow. <br/> Roads are symbolized in purple."
+}
